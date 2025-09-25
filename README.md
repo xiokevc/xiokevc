@@ -41,7 +41,6 @@
   <img src="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical" alt="GitHub Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=radical" alt="Top Languages" />
   <img src="https://streak-stats.demolab.com/?user=xiokevc&theme=radical" alt="GitHub Streak" />
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=xiokevc&theme=radical" alt="WakaTime Stats" />
 </p>
 
 ---
@@ -67,7 +66,7 @@ A full-stack vehicle maintenance tracker that helps users log service history an
 
 ### 📦 FeatherBOXD  
 **React · Node.js · Express · MongoDB · JWT**  
-FeatherBOXD is a birdwatching app that lets users log, identify, and share bird sightings using GPS and secure JWT authentication. It features AI-powered bird ID and interactive maps to explore migration trends, connecting bird lovers worldwide.
+FeatherBOXD is a birdwatching app that lets users log, identify, and share bird sightings using GPS and secure JWT authentication. It features AI-powered bird ID and interactive maps to explore migration trends, connecting bird lovers worldwide.  
 [🔗 Frontend Repo](https://github.com/xiokevc/featherboxd-front-end) | [🔗 Backend Repo](https://github.com/xiokevc/featherboxd-backend) | [🌐 Live App](https://featherboxd.netlify.app/)
 
 ---
