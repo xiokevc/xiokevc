@@ -40,7 +40,6 @@
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical" alt="GitHub Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=radical" alt="Top Languages" />
-  <img src="https://streak-stats.demolab.com/?user=xiokevc&theme=radical" alt="GitHub Streak" />
 </p>
 
 ---
