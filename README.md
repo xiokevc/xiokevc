@@ -64,7 +64,7 @@ A GPS-enabled movie watchlist app with secure JWT authentication and interactive
 ### 🍴 Fork It  
 **Node.js · Express · MongoDB · EJS**  
 A restaurant review platform featuring full CRUD, session-based authentication, and a responsive design for mobile-first browsing.  
-[🔗 GitHub Repo]([#](https://github.com/xiokevc/recipe-book-app)) | [🌐 Live App](https://restaurant-rating-de6c8b0d53f5.herokuapp.com/)
+[🔗 GitHub Repo](https://github.com/xiokevc/recipe-book-app) | [🌐 Live App](https://restaurant-rating-de6c8b0d53f5.herokuapp.com/)
 
 ---
 
