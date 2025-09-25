@@ -35,6 +35,10 @@
 
 ---
 
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical)
+
+---
+
 ## 🧠 About Me
 
 - 🏗️ Former Architectural Designer with 8+ years of experience in design & technical documentation  
@@ -84,7 +88,7 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 
 [![Email](https://img.shields.io/badge/email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:xiokevc@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xiokevc)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/xiokevc)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)]([https://linkedin.com/in/xiokevc](https://www.linkedin.com/in/kevin-xiong-816826282/))
 
 ---
 
