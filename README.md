@@ -35,7 +35,14 @@
 
 ---
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical)
+## 📈 GitHub Analytics
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=radical" alt="Top Languages" />
+  <img src="https://streak-stats.demolab.com/?user=xiokevc&theme=radical" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=xiokevc&theme=radical" alt="WakaTime Stats" />
+</p>
 
 ---
 
@@ -60,7 +67,7 @@ A full-stack vehicle maintenance tracker that helps users log service history an
 
 ### 📦 FeatherBOXD  
 **React · Node.js · Express · MongoDB · JWT**  
-A GPS-enabled movie watchlist app with secure JWT authentication and interactive map integration to track where you’ve watched your favorite films.  
+FeatherBOXD is a birdwatching app that lets users log, identify, and share bird sightings using GPS and secure JWT authentication. It features AI-powered bird ID and interactive maps to explore migration trends, connecting bird lovers worldwide.
 [🔗 Frontend Repo](https://github.com/xiokevc/featherboxd-front-end) | [🔗 Backend Repo](https://github.com/xiokevc/featherboxd-backend) | [🌐 Live App](https://featherboxd.netlify.app/)
 
 ---
@@ -80,7 +87,7 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 - Focused on JavaScript, Python, React, Django, REST APIs, Agile workflows
 
 🎓 **Dunwoody College of Technology** – AAS in Architectural Drafting & Design  
-*2014 – 2016*
+*Jan 2014 – Aug 2016*
 
 ---
 
@@ -88,7 +95,7 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 
 [![Email](https://img.shields.io/badge/email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:xiokevc@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xiokevc)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)]([https://linkedin.com/in/xiokevc](https://www.linkedin.com/in/kevin-xiong-816826282/))
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kevin-xiong-816826282/)
 
 ---
 
