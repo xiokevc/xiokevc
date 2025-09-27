@@ -96,7 +96,7 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 **Software Engineering Immersive Certificate**  
 *Issued by General Assembly on September 26, 2025*
 
-[![Verify Badge](https://img.shields.io/badge/Verify_on_Badgr-blue?style=flat-square&logo=OpenBadges)](https://api.badgr.io/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw)
+[![Verify Badge]([https://img.shields.io/badge/Verify_on_Badgr-blue?style=flat-square&logo=OpenBadges)](https://api.badgr.io/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw](https://badgr.com/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw?identity__email=xiokevc@gmail.com))
 
 ---
 
