@@ -89,6 +89,17 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 
 ---
 
+## 📜 Certifications
+
+[![General Assembly Badge](https://api.badgr.io/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw/image)](https://api.badgr.io/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw)
+
+**Software Engineering Immersive Certificate**  
+*Issued by General Assembly on September 26, 2025*
+
+[![Verify Badge](https://img.shields.io/badge/Verify_on_Badgr-blue?style=flat-square&logo=OpenBadges)](https://api.badgr.io/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw)
+
+---
+
 ## 📫 Connect With Me
 
 [![Email](https://img.shields.io/badge/email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:xiokevc@gmail.com)
