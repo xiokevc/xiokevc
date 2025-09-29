@@ -29,21 +29,21 @@
 
 ---
 
-### 🔐 Auth & Security
-![Auth](https://img.shields.io/badge/Auth-User_Login-green?style=flat)
-![Hashing](https://img.shields.io/badge/Hashing-SHA256-important?style=flat)  
-- JWT & session-based authentication  
-- Protected routes & secure hashing  
-
----
-
 ### 🖥️ Backend
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)  
 - RESTful APIs & MVC architecture  
-- Middleware, routing, and templating  
+- Middleware, routing, and templating
+
+---
+
+### 🔐 Auth & Security
+![Auth](https://img.shields.io/badge/Auth-User_Login-green?style=flat)
+![Hashing](https://img.shields.io/badge/Hashing-SHA256-important?style=flat)  
+- JWT & session-based authentication  
+- Protected routes & secure hashing  
 
 ---
 
