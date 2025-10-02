@@ -17,6 +17,7 @@
   "author": "Kevin Xiong",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "node-fetch": "^2.7.0"
   }
 }
