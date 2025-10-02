@@ -4,7 +4,8 @@
 🎨 Crafting full-stack apps with an eye for design and performance  
 🌍 Based in the US
 
-<!-- WEATHER_SVG -->
+<!-- WEATHER_SVG_START -->
+<!-- WEATHER_SVG_END -->
 
 ---
 
@@ -140,4 +141,4 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 
 ---
 
-<sub>⚡ Auto-updated daily with live weather & SVG animation</sub>
+<sub>⚡ Auto-updated daily with live weather, UV, and wind info (SVG animated)</sub>
