@@ -4,27 +4,7 @@
 🎨 Crafting full-stack apps with an eye for design and performance  
 🌍 Based in the US
 
-<svg 
-  xmlns="http://www.w3.org/2000/svg" 
-  width="500" height="180" 
-  role="img" 
-  aria-label="Personal introduction with current weather information"
-  viewBox="0 0 500 180"
-  >
-  <title>Kevin's introduction and current weather</title>
-  <text x="20" y="40" font-size="18" opacity="0" role="presentation">
-    👋 Hi, I'm Kevin
-    <animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze" begin="0s"/>
-  </text>
-  <text x="20" y="80" font-size="18" opacity="0" role="presentation">
-    🌡️ Weather: 🌤️ Mainly clear 70.3°F
-    <animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze" begin="1s"/>
-  </text>
-  <text x="20" y="120" font-size="18" opacity="0" role="presentation">
-    🚀 Full-Stack Engineer (MERN + Django)
-    <animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze" begin="2s"/>
-  </text>
-</svg>
+<!-- WEATHER_SVG -->
 
 ---
 
