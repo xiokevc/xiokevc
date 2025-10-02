@@ -21,7 +21,7 @@
     <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" begin="0s" />
   </text>
   <text id="weather-text" x="50" y="26" class="bubble-text" opacity="0">
-    Weather: Clear sky 81.4°F
+    Weather: Clear sky 82.3°F
     <set attributeName="opacity" to="1" begin="0s + 2s" />
   </text>
   <set attributeName="visibility" to="hidden" begin="0s + 2s" xlink:href="#weather-dots"/>
@@ -68,7 +68,7 @@
     <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" begin="1s" />
   </text>
   <text id="wind-text" x="50" y="26" class="bubble-text" opacity="0">
-    Wind: 15.5 mph
+    Wind: 16.3 mph
     <set attributeName="opacity" to="1" begin="1s + 2s" />
   </text>
   <set attributeName="visibility" to="hidden" begin="1s + 2s" xlink:href="#wind-dots"/>
