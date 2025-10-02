@@ -6,7 +6,7 @@
 
 <!-- WEATHER_SVG_START -->
 <p align="center">
-  <img src="weather.svg" alt="Live Weather Info" />
+  <!-- SVG will be injected here -->
 </p>
 <!-- WEATHER_SVG_END -->
 
