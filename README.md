@@ -6,7 +6,17 @@
 
 <!-- WEATHER_SVG_START -->
 <p align="center">
-  <img src="./weather.svg" alt="Live Weather Info" />
+  <svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Current weather">
+  <style>
+    text { font-family: Arial, sans-serif; fill: #333; }
+    .temp { font-size: 48px; font-weight: bold; }
+    .condition { font-size: 20px; }
+    image { width: 60px; height: 60px; }
+  </style>
+  <image href="https://openweathermap.org/img/wn/02d@2x.png" x="10" y="20" />
+  <text x="80" y="55" class="temp">83°F</text>
+  <text x="80" y="80" class="condition">Clouds</text>
+</svg>
 </p>
 <!-- WEATHER_SVG_END -->
 
