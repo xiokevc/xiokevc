@@ -1,0 +1,15 @@
+{
+  "name": "xiokevc",
+  "version": "1.0.0",
+  "description": "<!-- AUTO-GENERATED README, DO NOT EDIT DIRECTLY --> Updating… please wait for the GitHub Action to run 🙂",
+  "main": "update.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}

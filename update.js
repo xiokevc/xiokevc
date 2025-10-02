@@ -1,13 +1,62 @@
-<h1 align="center">Hi there, I'm Kevin 👋</h1>
+const fs = require("fs");
+const fetch = require("node-fetch");
 
-<p align="center">
-  🚀 Architectural Designer turned Software Engineer <br>
-  🎨 Crafting full-stack apps with an eye for design and performance <br>
-  🌍 Based in the US
-</p>
+// Detroit coordinates
+const LAT = 42.3314;
+const LON = -83.0458;
 
-<p align="center">
+async function getWeather() {
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current_weather=true`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("API error");
+    const data = await res.json();
 
+    if (!data.current_weather) return "N/A";
+
+    const tempC = data.current_weather.temperature;
+    const tempF = (tempC * 9) / 5 + 32;
+    const windKmh = data.current_weather.windspeed;
+    const windMph = windKmh * 0.621371; // convert km/h → mph
+    const code = data.current_weather.weathercode;
+
+    // Map weather codes → readable text
+    const codes = {
+      0: "☀️ Clear sky",
+      1: "🌤️ Mainly clear",
+      2: "⛅ Partly cloudy",
+      3: "☁️ Overcast",
+      45: "🌫️ Fog",
+      48: "🌫️ Rime fog",
+      51: "🌦️ Light drizzle",
+      53: "🌦️ Drizzle",
+      55: "🌦️ Heavy drizzle",
+      61: "🌧️ Rain",
+      63: "🌧️ Moderate rain",
+      65: "🌧️ Heavy rain",
+      71: "❄️ Snowfall",
+      73: "❄️ Moderate snow",
+      75: "❄️ Heavy snow",
+      80: "🌦️ Rain showers",
+      81: "🌦️ Showers",
+      82: "🌧️ Heavy showers",
+      95: "⛈️ Thunderstorm",
+      96: "⛈️ Thunderstorm + hail",
+      99: "⛈️ Severe thunderstorm"
+    };
+
+    const desc = codes[code] || "🌍 Weather unknown";
+    return `${desc} · ${tempC.toFixed(1)}°C / ${tempF.toFixed(1)}°F · 💨 ${windKmh.toFixed(
+      1
+    )} km/h / ${windMph.toFixed(1)} mph`;
+  } catch (err) {
+    console.error("Weather fetch failed:", err);
+    return "Weather unavailable";
+  }
+}
+
+function makeSVG(weather) {
+  return `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 180" width="100%">
   <style>
     .blob { font: 18px sans-serif; opacity: 0; }
@@ -17,10 +66,27 @@
     @keyframes fadein { to { opacity: 1; } }
   </style>
   <text x="20" y="40" class="blob b1" fill="black">👋 Hi, I'm Kevin</text>
-  <text x="20" y="80" class="blob b2" fill="black">🌤️ Weather: ☀️ Clear sky · 20.0°C / 68.0°F · 💨 6.9 km/h / 4.3 mph</text>
+  <text x="20" y="80" class="blob b2" fill="black">🌤️ Weather: ${weather}</text>
   <text x="20" y="120" class="blob b3" fill="black">🚀 Full-Stack Engineer (MERN + Django)</text>
 </svg>
+`;
+}
 
+async function main() {
+  const weather = await getWeather();
+  const svg = makeSVG(weather);
+
+  const readme = `
+<h1 align="center">Hi there, I'm Kevin 👋</h1>
+
+<p align="center">
+  🚀 Architectural Designer turned Software Engineer <br>
+  🎨 Crafting full-stack apps with an eye for design and performance <br>
+  🌍 Based in the US
+</p>
+
+<p align="center">
+${svg}
 </p>
 
 ---
@@ -158,3 +224,9 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 ---
 
 <sub>⚡ Auto-updated daily with live weather (via Open-Meteo) & SVG animation</sub>
+`;
+
+  fs.writeFileSync("README.md", readme.trim());
+}
+
+main();
