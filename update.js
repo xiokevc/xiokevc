@@ -25,18 +25,11 @@ function generateSVG(weather) {
   const condition = weather.weather[0].main;
   const icon = weather.weather[0].icon;
 
-  // Basic SVG with temperature and icon
   return `
 <svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Current weather">
-  <style>
-    text { font-family: Arial, sans-serif; fill: #333; }
-    .temp { font-size: 48px; font-weight: bold; }
-    .condition { font-size: 20px; }
-    image { width: 60px; height: 60px; }
-  </style>
-  <image href="https://openweathermap.org/img/wn/${icon}@2x.png" x="10" y="20" />
-  <text x="80" y="55" class="temp">${temp}°F</text>
-  <text x="80" y="80" class="condition">${condition}</text>
+  <image href="https://openweathermap.org/img/wn/${icon}@2x.png" x="10" y="20" width="60" height="60" />
+  <text x="80" y="55" font-family="Arial, sans-serif" font-weight="bold" font-size="48px" fill="#333">${temp}°F</text>
+  <text x="80" y="80" font-family="Arial, sans-serif" font-size="20px" fill="#333">${condition}</text>
 </svg>`;
 }
 
