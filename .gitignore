@@ -21,5 +21,3 @@ Thumbs.db
 *.local
 *.cache
 
-# Ignore weather SVG if you regenerate it locally but don't want to commit it
-weather.svg
