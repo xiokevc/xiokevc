@@ -1,14 +1,15 @@
 {
   "name": "xiokevc",
   "version": "1.0.0",
-  "description": "<!-- AUTO-GENERATED README, DO NOT EDIT DIRECTLY --> Updating… please wait for the GitHub Action to run 🙂",
+  "description": "🛠️ Auto-generates a dynamic README with live weather and SVG animation.",
   "main": "update.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update": "node update.js",
+    "start": "node update.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["README", "GitHub", "weather", "svg", "automation"],
+  "author": "Kevin Xiong",
+  "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.7.0"
   }
