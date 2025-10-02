@@ -5,6 +5,9 @@
 🌍 Based in the US
 
 <!-- WEATHER_SVG_START -->
+<p align="center">
+  <img src="https://your-host.com/path/to/weather.svg" alt="Live Weather Info" />
+</p>
 <!-- WEATHER_SVG_END -->
 
 ---

@@ -2,57 +2,48 @@ const fs = require("fs").promises;
 const path = require("path");
 const fetch = require("node-fetch");
 
+const TEMPLATE_PATH = "./template.md";
 const README_PATH = "./README.md";
-const ICONS_PATH = path.join(__dirname, "assets/weather-icons");
+const OUTPUT_SVG = "./weather.svg";
+const ICONS_PATH = path.join(__dirname, "assets", "weather-icons");
+
 const LAT = 44.9778;
 const LON = -93.2650;
 
-// --- Weather Code → Icon ---
-const iconMap = {
-  0: "clear-day.svg",
-  1: "partly-cloudy-day.svg",
-  2: "partly-cloudy-day.svg",
-  3: "cloudy.svg",
-  45: "fog.svg",
-  48: "fog.svg",
-  51: "drizzle.svg",
-  53: "drizzle.svg",
-  55: "drizzle.svg",
-  61: "rain.svg",
-  63: "rain.svg",
-  65: "rain.svg",
-  71: "snow.svg",
-  73: "snow.svg",
-  75: "snow.svg",
-  80: "rain.svg",
-  81: "rain.svg",
-  82: "rain.svg",
-  95: "thunderstorms.svg",
-  99: "hail.svg"
-};
-
-// --- UV Index → Icon ---
-function uvIcon(uv) {
-  if (uv === null || uv === undefined) return "not-available.svg";
-  if (uv <= 1) return "uv-index-1.svg";
-  if (uv <= 2) return "uv-index-2.svg";
-  if (uv <= 3) return "uv-index-3.svg";
-  if (uv <= 4) return "uv-index-4.svg";
-  if (uv <= 5) return "uv-index-5.svg";
-  if (uv <= 6) return "uv-index-6.svg";
-  if (uv <= 7) return "uv-index-7.svg";
-  if (uv <= 8) return "uv-index-8.svg";
-  if (uv <= 9) return "uv-index-9.svg";
-  if (uv <= 10) return "uv-index-10.svg";
-  if (uv <= 11) return "uv-index-11.svg";
-  return "uv-index-12.svg";
+function resolveWeatherIcon(code, isDaytime) {
+  const mapping = {
+    0: isDaytime ? "clear-day.svg" : "clear-night.svg",
+    1: isDaytime ? "partly-cloudy-day.svg" : "partly-cloudy-night.svg",
+    2: isDaytime ? "partly-cloudy-day.svg" : "partly-cloudy-night.svg",
+    3: "cloudy.svg",
+    45: isDaytime ? "fog-day.svg" : "fog-night.svg",
+    48: isDaytime ? "fog-day.svg" : "fog-night.svg",
+    51: "drizzle.svg",
+    53: "drizzle.svg",
+    55: "drizzle.svg",
+    61: "rain.svg",
+    63: isDaytime ? "partly-cloudy-day-rain.svg" : "partly-cloudy-night-rain.svg",
+    65: "rain.svg",
+    71: "snow.svg",
+    73: isDaytime ? "partly-cloudy-day-snow.svg" : "partly-cloudy-night-snow.svg",
+    75: "snow.svg",
+    80: "rain.svg",
+    81: isDaytime ? "thunderstorms-day-rain.svg" : "thunderstorms-night-rain.svg",
+    82: "thunderstorms-rain.svg",
+    95: isDaytime ? "thunderstorms-day.svg" : "thunderstorms-night.svg",
+    99: "hail.svg",
+  };
+  return mapping[code] || "not-available.svg";
 }
 
-// --- Wind Speed → Beaufort Icon ---
+function uvIcon(uv) {
+  if (uv === null || uv === undefined) return "not-available.svg";
+  const idx = Math.min(Math.floor(uv), 12);
+  return `uv-index-${idx}.svg`;
+}
+
 function beaufortIcon(speedMph) {
   if (speedMph === null || speedMph === undefined) return "not-available.svg";
-
-  // Beaufort thresholds in mph
   const thresholds = [
     { max: 1, file: "wind-beaufort-0.svg" },
     { max: 3, file: "wind-beaufort-1.svg" },
@@ -68,24 +59,23 @@ function beaufortIcon(speedMph) {
     { max: 72, file: "wind-beaufort-11.svg" },
     { max: Infinity, file: "wind-beaufort-12.svg" }
   ];
-
   return thresholds.find(t => speedMph <= t.max).file;
 }
 
 async function getWeather() {
   try {
-    console.log("Fetching weather data...");
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current_weather=true&temperature_unit=fahrenheit&daily=uv_index_max&timezone=auto`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current_weather=true&daily=uv_index_max,sunrise,sunset&timezone=auto&temperature_unit=fahrenheit`;
     const res = await fetch(url);
     const data = await res.json();
 
-    if (!data || !data.current_weather) {
-      console.warn("No current_weather data found");
-      return { weatherText: "Weather unavailable", weatherCode: null, uv: null, wind: null };
-    }
-
-    const { temperature, weathercode, windspeed } = data.current_weather;
+    const { temperature, weathercode, windspeed, time } = data.current_weather;
     const uv = data.daily?.uv_index_max?.[0] ?? null;
+
+    const sunrise = new Date(data.daily.sunrise[0]);
+    const sunset = new Date(data.daily.sunset[0]);
+    const now = new Date(time);
+
+    const isDaytime = now >= sunrise && now < sunset;
 
     const descriptions = {
       0: "Clear sky",
@@ -110,99 +100,93 @@ async function getWeather() {
       99: "Hailstorm"
     };
 
-    const text = descriptions[weathercode] || "Unknown weather";
-    const weatherText = `${text} ${temperature.toFixed(1)}°F`;
+    const desc = descriptions[weathercode] || "Unknown weather";
+    const weatherText = `${desc} ${temperature.toFixed(1)}°F`;
 
-    console.log(`Weather: ${weatherText} | Wind: ${windspeed.toFixed(1)} mph | UV: ${uv ?? "N/A"}`);
-    return { weatherText, weatherCode: weathercode, uv, wind: windspeed };
+    return {
+      weatherText,
+      weatherCode: weathercode,
+      uv,
+      wind: windspeed,
+      isDaytime
+    };
   } catch (error) {
-    console.error("Failed to fetch weather:", error);
-    return { weatherText: "Weather unavailable", weatherCode: null, uv: null, wind: null };
+    console.error("Weather fetch failed:", error);
+    return {
+      weatherText: "Weather unavailable",
+      weatherCode: null,
+      uv: null,
+      wind: null,
+      isDaytime: true
+    };
   }
 }
 
-async function getIcon(file) {
+async function getIcon(filename) {
+  const filePath = path.join(ICONS_PATH, filename);
   try {
-    const filePath = path.join(ICONS_PATH, file);
     return await fs.readFile(filePath, "utf-8");
-  } catch (error) {
-    console.warn("Icon missing, using fallback:", error.message);
-    return `<svg><text x="0" y="15">N/A</text></svg>`;
+  } catch {
+    const fallback = path.join(ICONS_PATH, "not-available.svg");
+    return await fs.readFile(fallback, "utf-8");
   }
 }
 
-function makeSVG(weather, weatherIcon, uv, uvIconSVG, wind, windIcon) {
+function makeBubble(x, y, id, finalText, iconSVG, delay = "0s") {
   return `
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="240" role="img" aria-label="Animated introduction with weather, UV, and wind information">
+<g transform="translate(${x}, ${y})">
+  <rect class="bubble" x="0" y="0" width="460" height="40" />
+  <g transform="translate(10,4)" class="icon">${iconSVG}</g>
+  <text id="${id}-dots" x="50" y="26" class="bubble-text">
+    <tspan>.</tspan><tspan>.</tspan><tspan>.</tspan>
+    <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" begin="${delay}" />
+  </text>
+  <text id="${id}-text" x="50" y="26" class="bubble-text" opacity="0">
+    ${finalText}
+    <set attributeName="opacity" to="1" begin="${delay} + 2s" />
+  </text>
+  <set attributeName="visibility" to="hidden" begin="${delay} + 2s" xlink:href="#${id}-dots"/>
+</g>
+`;
+}
+
+function makeSVG(weather, weatherIconSVG, uv, uvIconSVG, wind, windIconSVG) {
+  return `
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="280" role="img" aria-label="Weather info">
   <style>
-    .fade-in {
-      animation: fadeIn 1.5s ease forwards;
-      opacity: 0;
-      fill: #333;
-    }
-    .fade-in.delay-1 { animation-delay: 0s; }
-    .fade-in.delay-2 { animation-delay: 1.5s; }
-    .fade-in.delay-3 { animation-delay: 3s; }
-    .fade-in.delay-4 { animation-delay: 4.5s; }
-    .fade-in.delay-5 { animation-delay: 6s; }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        fill: #4A90E2;
-      }
-    }
-    svg.icon {
-      width: 32px;
-      height: 32px;
-    }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .bubble { fill: #e0f7fa; stroke: #26c6da; rx: 12; ry: 12; }
+    .bubble-text { font-size: 16px; fill: #004d40; }
+    .icon svg { width: 24px; height: 24px; }
   </style>
-
-  <text x="20" y="40" font-size="18" class="fade-in delay-1">
-    👋 Hi, I'm Kevin
-  </text>
-  <g transform="translate(20, 80)" class="fade-in delay-2">
-    <g class="icon">${weatherIcon}</g>
-    <text x="50" y="20" font-size="18">Weather: ${weather}</text>
-  </g>
-  <g transform="translate(20, 120)" class="fade-in delay-3">
-    <g class="icon">${uvIconSVG}</g>
-    <text x="50" y="20" font-size="18">UV Index: ${uv ?? "N/A"}</text>
-  </g>
-  <g transform="translate(20, 160)" class="fade-in delay-4">
-    <g class="icon">${windIcon}</g>
-    <text x="50" y="20" font-size="18">Wind: ${wind?.toFixed(1) ?? "N/A"} mph</text>
-  </g>
-  <text x="20" y="210" font-size="18" class="fade-in delay-5">
-    🚀 Full-Stack Engineer (MERN + Django)
-  </text>
+  <text x="20" y="30" font-size="20">👋 Hi, I'm Kevin</text>
+  ${makeBubble(20, 50, "weather", `Weather: ${weather}`, weatherIconSVG, "0s")}
+  ${makeBubble(20, 110, "uv", `UV Index: ${uv ?? "N/A"}`, uvIconSVG, "0.5s")}
+  ${makeBubble(20, 170, "wind", `Wind: ${wind?.toFixed(1) ?? "N/A"} mph`, windIconSVG, "1s")}
+  <text x="20" y="250" font-size="18">🚀 Full‑Stack Engineer (MERN + Django)</text>
 </svg>
-  `.trim();
+`.trim();
 }
 
 async function updateReadme() {
-  const { weatherText, weatherCode, uv, wind } = await getWeather();
+  const { weatherText, weatherCode, uv, wind, isDaytime } = await getWeather();
 
-  const weatherIcon = await getIcon(iconMap[weatherCode] || "not-available.svg");
+  const weatherIconSVG = await getIcon(resolveWeatherIcon(weatherCode, isDaytime));
   const uvIconSVG = await getIcon(uvIcon(uv));
-  const windIcon = await getIcon(beaufortIcon(wind));
+  const windIconSVG = await getIcon(beaufortIcon(wind));
 
-  const svg = makeSVG(weatherText, weatherIcon, uv, uvIconSVG, wind, windIcon);
+  const svg = makeSVG(weatherText, weatherIconSVG, uv, uvIconSVG, wind, windIconSVG);
+  await fs.writeFile(OUTPUT_SVG, svg, "utf-8");
+  console.log("✅ Generated weather.svg");
 
-  let readme = await fs.readFile(README_PATH, "utf-8");
-
-  if (!readme.includes("<!-- WEATHER_SVG_START -->")) {
-    console.error("Placeholder not found in README.md");
-    return;
-  }
-
-  const updatedReadme = readme.replace(
-    /<!-- WEATHER_SVG_START -->([\s\S]*?)<!-- WEATHER_SVG_END -->/,
-    `<!-- WEATHER_SVG_START -->\n${svg}\n<!-- WEATHER_SVG_END -->`
+  const template = await fs.readFile(TEMPLATE_PATH, "utf-8");
+  const injected = template.replace(
+    /<!-- WEATHER_SVG_START -->[\s\S]*?<!-- WEATHER_SVG_END -->/g,
+    `<!-- WEATHER_SVG_START -->\n<p align="center">\n  <img src="./weather.svg" alt="Live Weather Info" />\n</p>\n<!-- WEATHER_SVG_END -->`
   );
 
-  await fs.writeFile(README_PATH, updatedReadme);
-  console.log("README.md updated successfully.");
+  await fs.writeFile(README_PATH, injected, "utf-8");
+  console.log("✅ README.md generated from template.md");
 }
 
 updateReadme();
