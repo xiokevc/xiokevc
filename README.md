@@ -6,10 +6,26 @@
 
 <!-- WEATHER_SVG_START -->
 <p align="center">
-<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Current weather">
-  <image href="https://openweathermap.org/img/wn/02d@2x.png" x="10" y="20" width="60" height="60" />
-  <text x="80" y="55" font-family="Arial, sans-serif" font-weight="bold" font-size="48px" fill="#333">83°F</text>
-  <text x="80" y="80" font-family="Arial, sans-serif" font-size="20px" fill="#333">Clouds</text>
+<svg width="320" height="120" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Current weather">
+  <g id="weather-container" transform="translate(10,10)">
+    <g transform="scale(0.8)">
+      <defs>
+		<clipPath id="a">
+			<polygon points="12 35 6.72 30.79 4.72 24.79 5.72 17.79 9.72 12.79 14.72 9.79 20.72 9.79 25.72 10.79 28.72 13.79 33 20 27 24 21 24 18 27 18 31 14 33 12 35" fill="none"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#a)">
+		<g>
+			<path d="M23.5,24A4.5,4.5,0,1,1,19,19.5,4.49,4.49,0,0,1,23.5,24ZM19,15.67V12.5m0,23V32.33m5.89-14.22,2.24-2.24M10.87,32.13l2.24-2.24m0-11.78-2.24-2.24M27.13,32.13l-2.24-2.24M7.5,24h3.17M30.5,24H27.33" fill="none" stroke="#f59e0b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+			<animateTransform attributeName="transform" type="rotate" from="0 19 24" to="360 19 24" dur="45s" repeatCount="indefinite"/>
+		</g>
+	</g>
+	<path d="M46.5,31.5l-.32,0a10.49,10.49,0,0,0-19.11-8,7,7,0,0,0-10.57,6,7.21,7.21,0,0,0,.1,1.14A7.5,7.5,0,0,0,18,45.5a4.19,4.19,0,0,0,.5,0v0h28a7,7,0,0,0,0-14Z" fill="none" stroke="#e5e7eb" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+    <text x="120" y="45" font-family="Arial, sans-serif" font-weight="bold" font-size="40px" fill="#333">84°F / 29°C</text>
+    <text x="120" y="75" font-family="Arial, sans-serif" font-size="20px" fill="#333">Clouds</text>
+    <text x="120" y="105" font-family="Arial, sans-serif" font-size="18px" fill="#666">Minneapolis, MN</text>
+  </g>
 </svg>
 </p>
 <!-- WEATHER_SVG_END -->
