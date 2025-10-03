@@ -16,13 +16,13 @@
 	</defs>
 	<g clip-path="url(#a)">
 		<g>
-			<path d="M29.33,26.68A10.61,10.61,0,0,1,18.65,16.14,10.5,10.5,0,0,1,19,13.5,10.54,10.54,0,1,0,30.5,26.61,11.48,11.48,0,0,1,29.33,26.68Z" fill="none" stroke="#72b9d5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-			<animateTransform attributeName="transform" type="rotate" values="-10 19.22 24.293;10 19.22 24.293;-10 19.22 24.293" dur="10s" repeatCount="indefinite"/>
+			<path d="M23.5,24A4.5,4.5,0,1,1,19,19.5,4.49,4.49,0,0,1,23.5,24ZM19,15.67V12.5m0,23V32.33m5.89-14.22,2.24-2.24M10.87,32.13l2.24-2.24m0-11.78-2.24-2.24M27.13,32.13l-2.24-2.24M7.5,24h3.17M30.5,24H27.33" fill="none" stroke="#f59e0b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+			<animateTransform attributeName="transform" type="rotate" from="0 19 24" to="360 19 24" dur="45s" repeatCount="indefinite"/>
 		</g>
 	</g>
 	<path d="M46.5,31.5l-.32,0a10.49,10.49,0,0,0-19.11-8,7,7,0,0,0-10.57,6,7.21,7.21,0,0,0,.1,1.14A7.5,7.5,0,0,0,18,45.5a4.19,4.19,0,0,0,.5,0v0h28a7,7,0,0,0,0-14Z" fill="none" stroke="#e5e7eb" stroke-linejoin="round" stroke-width="3"/>
     </g>
-    <text x="120" y="45" font-family="Arial, sans-serif" font-weight="bold" font-size="40px" fill="#333">77°F / 25°C</text>
+    <text x="120" y="45" font-family="Arial, sans-serif" font-weight="bold" font-size="40px" fill="#333">73°F / 23°C</text>
     <text x="120" y="75" font-family="Arial, sans-serif" font-size="20px" fill="#333">Clouds</text>
     <text x="120" y="105" font-family="Arial, sans-serif" font-size="18px" fill="#666">Minneapolis, MN</text>
   </g>
@@ -30,88 +30,21 @@
 </p>
 <!-- WEATHER_SVG_END -->
 
-## 💻 Tech Stack & Skills
+<h1 align="center">🖥️ Tech Stack</h1>
 
-### 🧠 Core Languages & Web Tech
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=sqlite&logoColor=white)
-![JSX](https://img.shields.io/badge/JSX-61DAFB?style=flat&logo=react&logoColor=white)
-
----
-
-### ⚛️ Frontend
-![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white)
-![DOM](https://img.shields.io/badge/DOM-Manipulation-blue?style=flat)  
-- Component-based UI design  
-- State management & routing  
-
----
-
-### 🖥️ Backend
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)  
-- RESTful APIs & MVC architecture  
-- Middleware, routing, and templating
-
----
-
-### 🔐 Auth & Security
-![Auth](https://img.shields.io/badge/Auth-User_Login-green?style=flat)
-![Hashing](https://img.shields.io/badge/Hashing-SHA256-important?style=flat)  
-- JWT & session-based authentication  
-- Protected routes & secure hashing  
-
----
-
-### 🗃️ Databases
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
-![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat&logo=mongoose&logoColor=white)  
-- Schema design & data modeling  
-- Relational & NoSQL queries  
-
----
-
-### 🧪 APIs & Tools
-![REST](https://img.shields.io/badge/REST-API-blue?style=flat)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=postman&logoColor=white)  
-- API testing & route debugging  
-- External service integration  
-
----
-
-### 🛠️ Dev Tools
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
-![CLI](https://img.shields.io/badge/CLI-Terminal-333?style=flat&logo=gnubash&logoColor=white)
-![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
-
----
-
-## 📈 GitHub Analytics
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=radical" alt="Top Languages" />
+  <img src="assets/techstack.gif" alt="Kevin's banner animation" width="100%" />
 </p>
 
----
+<h1 align="center">🧠 About Me</h1>
 
-## 🧠 About Me
 - 🏗️ Former Architectural Designer with 8+ years of experience in design & technical documentation  
 - 🔁 Transitioned into software development to merge **creative thinking** with **problem-solving**  
 - 🌱 Currently exploring backend architecture & cloud deployment  
 - 🤝 Skilled at collaborating with cross-functional teams — from engineers to designers  
-- 🧩 Passionate about building elegant, user-centered web applications  
+- 🧩 Passionate about building elegant, user-centered web applications
 
----
-
-## 🛠️ Featured Projects
+<h1 align="center">🛠️ Featured Projects</h1>
 
 ### 🚘 [Redline Tracker](https://github.com/xiokevc/redline-tracker) | [🌐 Live App](https://redline-tracker-8dde54ed8f81.herokuapp.com/)  
 **Python · Django · PostgreSQL · Bootstrap**  
@@ -129,6 +62,25 @@ Birdwatching app that lets users log, identify, and share bird sightings using G
 **Node.js · Express · MongoDB · EJS**  
 A restaurant review platform featuring full CRUD, session-based authentication, and a responsive design for mobile-first browsing.
 
+## 📈 GitHub Analytics
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <br/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=radical" alt="Top Languages" />
+</p>
+
+## 📜 Certifications
+<p align="center">
+  <a href="https://api.badgr.io/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw">
+    <img src="https://api.badgr.io/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw/image" alt="General Assembly Badge" />
+  </a><br/>
+  <strong>Software Engineering Immersive Certificate</strong><br/>
+  <em>Issued by General Assembly on September 26, 2025</em><br/>
+  <a href="https://generalassembly.badgr.com/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw">
+    <img src="https://img.shields.io/badge/Verify_on_Badgr-blue?style=flat-square&logo=OpenBadges" alt="Verify Badge" />
+  </a>
+</p>
+
 ---
 
 ## 🎓 Education
@@ -139,14 +91,6 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 
 🎓 **Dunwoody College of Technology** – AAS in Architectural Drafting & Design  
 *Jan 2014 – Aug 2016*
-
----
-
-## 📜 Certifications
-[![General Assembly Badge](https://api.badgr.io/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw/image)](https://api.badgr.io/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw)  
-**Software Engineering Immersive Certificate**  
-*Issued by General Assembly on September 26, 2025*  
-[![Verify Badge](https://img.shields.io/badge/Verify_on_Badgr-blue?style=flat-square&logo=OpenBadges)](https://generalassembly.badgr.com/public/assertions/yTlUQrR3Qj-hHa9zwVZkTw)
 
 ---
 
