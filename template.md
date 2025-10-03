@@ -1,16 +1,14 @@
 <h1 align="center">Hi there, I'm Kevin 👋</h1>
 
-🚀 Architectural Designer turned Software Engineer  
-🎨 Crafting full-stack apps with an eye for design and performance  
-🌍 Based in the US
+<p align="center">
+  <img src="assets/readme-gif.gif" alt="Kevin's banner animation" width="100%" />
+</p>
 
 <!-- WEATHER_SVG_START -->
 <p align="center">
   <!-- SVG will be injected here -->
 </p>
 <!-- WEATHER_SVG_END -->
-
----
 
 ## 💻 Tech Stack & Skills
 
