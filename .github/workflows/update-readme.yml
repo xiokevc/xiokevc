@@ -8,6 +8,10 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+
+    env:
+      OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
