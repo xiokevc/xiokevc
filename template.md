@@ -1,7 +1,11 @@
 <h1 align="center">Hi there, I'm Kevin 👋</h1>
 
 <p align="center">
-  <img src="assets/readme-gif.gif" alt="Kevin's banner animation" width="100%" />
+  <picture>
+    <source srcset="./assets/readme-gif-dark.gif" media="(prefers-color-scheme: dark)" />
+    <source srcset="./assets/readme-gif-light.gif" media="(prefers-color-scheme: light)" />
+    <img src="./assets/readme-gif-light.gif" alt="Kevin's banner animation" width="100%" />
+  </picture>
 </p>
 
 <!-- WEATHER_SVG_START -->
@@ -13,7 +17,11 @@
 <h1 align="center">🖥️ Tech Stack</h1>
 
 <p align="center">
-  <img src="assets/techstack.gif" alt="Kevin's banner animation" width="100%" />
+  <picture>
+    <source srcset="./assets/techstackdark.gif" media="(prefers-color-scheme: dark)" />
+    <source srcset="./assets/techstacklight.gif" media="(prefers-color-scheme: light)" />
+    <img src="./assets/techstacklight.gif" alt="Kevin's tech stack animation" width="100%" />
+  </picture>
 </p>
 
 <h1 align="center">🧠 About Me</h1>
@@ -32,22 +40,30 @@ A full-stack vehicle maintenance tracker that helps users log service history an
 
 ---
 
-### [🕊️ FeatherBOXD](https://featherboxd.netlify.app/) | [⚙️ Frontend Repository ](https://github.com/xiokevc/featherboxd-front-end) | [⚙️ Backend Repository](https://github.com/xiokevc/featherboxd-backend)  
+### [🕊️ FeatherBOXD](https://featherboxd.netlify.app/) | [⚙️ Frontend Repository](https://github.com/xiokevc/featherboxd-front-end) | [⚙️ Backend Repository](https://github.com/xiokevc/featherboxd-backend)  
 **React · Node.js · Express · MongoDB · JWT**  
 Birdwatching app that lets users log, identify, and share bird sightings using GPS and secure JWT authentication. Features AI-powered bird ID and interactive maps to explore migration trends.
 
 ---
 
-### 🍴 [Fork It](https://restaurant-rating-de6c8b0d53f5.herokuapp.com/)  | [⚙️ Repository](https://github.com/xiokevc/recipe-book-app)  
+### 🍴 [Fork It](https://restaurant-rating-de6c8b0d53f5.herokuapp.com/) | [⚙️ Repository](https://github.com/xiokevc/recipe-book-app)  
 **Node.js · Express · MongoDB · EJS**  
-A restaurant review platform featuring full CRUD, session-based authentication, and a responsive design for mobile-first browsing. 
+A restaurant review platform featuring full CRUD, session-based authentication, and a responsive design for mobile-first browsing.
 
 <h1 align="center">📈 GitHub Analytics</h1>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <picture>
+    <source srcset="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" media="(prefers-color-scheme: dark)" />
+    <source srcset="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=default" media="(prefers-color-scheme: light)" />
+    <img src="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=default" alt="GitHub Stats" />
+  </picture>
   <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=radical" alt="Top Languages" />
+  <picture>
+    <source srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=radical&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" media="(prefers-color-scheme: dark)" />
+    <source srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=default" media="(prefers-color-scheme: light)" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=default" alt="Top Languages" />
+  </picture>
 </p>
 
 <h1 align="center">📜 Certifications</h1>
@@ -77,7 +93,7 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 
 ---
 
-<h1 align="center">📫 Connect With Me </h1>
+<h1 align="center">📫 Connect With Me</h1>
 
 [![Email](https://img.shields.io/badge/email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:xiokevc@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xiokevc)

@@ -15,7 +15,7 @@
 	</g>
 	<path d="M46.5,31.5l-.32,0a10.49,10.49,0,0,0-19.11-8,7,7,0,0,0-10.57,6,7.21,7.21,0,0,0,.1,1.14A7.5,7.5,0,0,0,18,45.5a4.19,4.19,0,0,0,.5,0v0h28a7,7,0,0,0,0-14Z" fill="none" stroke="#e5e7eb" stroke-linejoin="round" stroke-width="3"/>
     </g>
-    <text x="120" y="45" font-family="Arial, sans-serif" font-weight="bold" font-size="40px" fill="#333">82°F / 28°C</text>
+    <text x="120" y="45" font-family="Arial, sans-serif" font-weight="bold" font-size="40px" fill="#333">50°F / 10°C</text>
     <text x="120" y="75" font-family="Arial, sans-serif" font-size="20px" fill="#333">Clouds</text>
     <text x="120" y="105" font-family="Arial, sans-serif" font-size="18px" fill="#666">Minneapolis, MN</text>
   </g>

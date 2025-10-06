@@ -1,7 +1,11 @@
 <h1 align="center">Hi there, I'm Kevin 👋</h1>
 
 <p align="center">
-  <img src="assets/readme-gif.gif" alt="Kevin's banner animation" width="100%" />
+  <picture>
+    <source srcset="./assets/readme-gif-dark.gif" media="(prefers-color-scheme: dark)" />
+    <source srcset="./assets/readme-gif-light.gif" media="(prefers-color-scheme: light)" />
+    <img src="./assets/readme-gif-light.gif" alt="Kevin's banner animation" width="100%" />
+  </picture>
 </p>
 
 <!-- WEATHER_SVG_START -->
@@ -22,7 +26,7 @@
 	</g>
 	<path d="M46.5,31.5l-.32,0a10.49,10.49,0,0,0-19.11-8,7,7,0,0,0-10.57,6,7.21,7.21,0,0,0,.1,1.14A7.5,7.5,0,0,0,18,45.5a4.19,4.19,0,0,0,.5,0v0h28a7,7,0,0,0,0-14Z" fill="none" stroke="#e5e7eb" stroke-linejoin="round" stroke-width="3"/>
     </g>
-    <text x="120" y="45" font-family="Arial, sans-serif" font-weight="bold" font-size="40px" fill="#333">82°F / 28°C</text>
+    <text x="120" y="45" font-family="Arial, sans-serif" font-weight="bold" font-size="40px" fill="#333">50°F / 10°C</text>
     <text x="120" y="75" font-family="Arial, sans-serif" font-size="20px" fill="#333">Clouds</text>
     <text x="120" y="105" font-family="Arial, sans-serif" font-size="18px" fill="#666">Minneapolis, MN</text>
   </g>
@@ -33,7 +37,11 @@
 <h1 align="center">🖥️ Tech Stack</h1>
 
 <p align="center">
-  <img src="assets/techstack.gif" alt="Kevin's banner animation" width="100%" />
+  <picture>
+    <source srcset="./assets/techstackdark.gif" media="(prefers-color-scheme: dark)" />
+    <source srcset="./assets/techstacklight.gif" media="(prefers-color-scheme: light)" />
+    <img src="./assets/techstacklight.gif" alt="Kevin's tech stack animation" width="100%" />
+  </picture>
 </p>
 
 <h1 align="center">🧠 About Me</h1>
@@ -46,28 +54,36 @@
 
 <h1 align="center">🛠️ Featured Projects</h1>
 
-### [🚘 Redline Tracker](https://redline-tracker-8dde54ed8f81.herokuapp.com/) | [⚙️ Repository](https://github.com/xiokevc/redline-tracker)  
+### [🚘 Redline Tracker](https://redline-tracker-8dde54ed8f81.herokuapp.com/) | [📋 Planning](https://trello.com/b/cgxiDrwf/redlinetracker) | [⚙️ Repository](https://github.com/xiokevc/redline-tracker)  
 **Python · Django · PostgreSQL · Bootstrap**  
 A full-stack vehicle maintenance tracker that helps users log service history and repairs—replacing paper records with a modern, intuitive interface.
 
 ---
 
-### [🕊️ FeatherBOXD](https://featherboxd.netlify.app/) | [⚙️ Frontend Repository ](https://github.com/xiokevc/featherboxd-front-end) | [⚙️ Backend Repository](https://github.com/xiokevc/featherboxd-backend)  
+### [🕊️ FeatherBOXD](https://featherboxd.netlify.app/) | [📋 Planning](https://trello.com/b/vWNbnqOK/featherboxd) | [⚙️ Frontend Repository](https://github.com/xiokevc/featherboxd-front-end) | [⚙️ Backend Repository](https://github.com/xiokevc/featherboxd-backend)  
 **React · Node.js · Express · MongoDB · JWT**  
 Birdwatching app that lets users log, identify, and share bird sightings using GPS and secure JWT authentication. Features AI-powered bird ID and interactive maps to explore migration trends.
 
 ---
 
-### 🍴 [Fork It](https://restaurant-rating-de6c8b0d53f5.herokuapp.com/)  | [⚙️ Repository](https://github.com/xiokevc/recipe-book-app)  
+### 🍴 [Fork It](https://restaurant-rating-de6c8b0d53f5.herokuapp.com/) | [📋 Planning](https://trello.com/b/pKiDnZ83/my-trello-board) | [⚙️ Repository](https://github.com/xiokevc/recipe-book-app)  
 **Node.js · Express · MongoDB · EJS**  
-A restaurant review platform featuring full CRUD, session-based authentication, and a responsive design for mobile-first browsing. 
+A restaurant review platform featuring full CRUD, session-based authentication, and a responsive design for mobile-first browsing.
 
 <h1 align="center">📈 GitHub Analytics</h1>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <picture>
+    <source srcset="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=radical&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" media="(prefers-color-scheme: dark)" />
+    <source srcset="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=default" media="(prefers-color-scheme: light)" />
+    <img src="https://github-readme-stats.vercel.app/api?username=xiokevc&show_icons=true&theme=default" alt="GitHub Stats" />
+  </picture>
   <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=radical" alt="Top Languages" />
+  <picture>
+    <source srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=radical&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" media="(prefers-color-scheme: dark)" />
+    <source srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=default" media="(prefers-color-scheme: light)" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiokevc&layout=compact&theme=default" alt="Top Languages" />
+  </picture>
 </p>
 
 <h1 align="center">📜 Certifications</h1>
@@ -97,16 +113,11 @@ A restaurant review platform featuring full CRUD, session-based authentication, 
 
 ---
 
-<h1 align="center">📫 Connect With Me </h1>
+<h1 align="center">📫 Connect With Me</h1>
 
 [![Email](https://img.shields.io/badge/email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:xiokevc@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xiokevc)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kevin-xiong-816826282/)
-
----
-
-## ⚡ Fun Fact
-> 🧠 I used to turn buildings into blueprints — now I turn ideas into full-stack applications.  
 
 ---
 
